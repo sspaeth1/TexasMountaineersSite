@@ -1,0 +1,19 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 06 Jan 2020 11:41:35 at http://texasmountaineers.org/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://texasmountaineers.org/ -O1 "D:\Google Drive\_Projects_Creative-personal\Texas_Mountaineers\Site\Site 2019\TexasMountaineers_wordpress2019" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:41:52	Error: 	"Method Not Allowed" (405) at link texasmountaineers.org/wordpress/xmlrpc.php (from texasmountaineers.org/)
+11:42:58	Warning: 	Retry after error -4 (No data (connection closed)) at link texasmountaineers.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftexasmountaineers.org%2Fguidelines%2F&format=xml (from texasmountaineers.org/guidelines/)
+11:43:11	Warning: 	Retry after error 500 (Internal Server Error) at link texasmountaineers.org/forum/Themes/Reseller/images/ (from texasmountaineers.org/forum/)
+11:43:14	Error: 	"Not Found" (404) at link texasmountaineers.org/forum/android-app://com.quoord.tapatalkpro.activity/tapatalk/texasmountaineers.org/forum/?location=index&channel=google-indexing (from texasmountaineers.org/forum/)
+11:43:14	Error: 	"Not Found" (404) at link texasmountaineers.org/forum/ios-app://307880732/tapatalk/texasmountaineers.org/forum/?location=index&channel=google-indexing (from texasmountaineers.org/forum/)
+11:43:15	Warning: 	Retry after error -4 (No data (connection closed)) at link texasmountaineers.org/forum/index.php?scheduled=mailq;ts=1578332338 (from texasmountaineers.org/forum/Themes/Reseller/?pretty;board=Themes;topic=Reseller.0)
+11:43:15	Warning: 	Retry after error 500 (Internal Server Error) at link texasmountaineers.org/forum/Themes/Reseller/images/ (from texasmountaineers.org/forum/)
+11:43:16	Error: 	"Internal Server Error" (500) after 2 retries at link texasmountaineers.org/forum/Themes/Reseller/images/ (from texasmountaineers.org/forum/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 41 seconds : 130 links scanned, 121 files written (3376664 bytes overall) [2696867 bytes received at 26701 bytes/sec], 1042305 bytes transferred using HTTP compression in 61 files, ratio 29%, 11.2 requests per connection
+(4 errors, 4 warnings, 0 messages)

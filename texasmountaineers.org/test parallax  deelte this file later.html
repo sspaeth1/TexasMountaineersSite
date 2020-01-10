@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>test parallax</title>
+
+    <style>
+
+
+
+    body{
+      margin:0px;
+      height: 100vh;
+      margin:0;
+      font-size:5em;
+    }
+
+    section{
+      height: 100%;
+    }
+    img{
+      max-width:100%;
+
+    }
+
+    ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display:grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      align-items: middle;
+      place-items: center;
+      height:100vh;
+    }
+
+    </style>
+  </head>
+
+
+  <body>
+
+<div></div>
+<section>
+  <ul>
+      <!-- <li class=""><img src="wordpress/wp-content/uploads/rustyHardware.png" alt=""></li>
+    <li class="scroll">hjkjhk<img class="scroll" src="wordpress/wp-content/uploads/boltHanger.png" alt=""></li>
+    <li class="">dfg<img src="wordpress/wp-content/uploads/graniteRock.png" alt=""></li>
+    <li class=""><img src="wordpress/wp-content/uploads/blurBG.png" alt=""></li> -->
+    <li class="scroll">AS</li>
+    <li >GAR</li>
+    <li>DEN</li>
+  </ul>
+
+</section>
+<section></section>
+
+
+  <script>
+    window.addEventListener('scroll', function(e){
+          let target = document.querySelector('.scroll');
+          var scrolled = window.pageYOffset;
+          var rate =  scrolled * .5;
+          target.style.transform = ''traslateY( '+rate+'px;
+          console.log(  rate);
+    });
+  </script>
+
+  </body>
+</html>

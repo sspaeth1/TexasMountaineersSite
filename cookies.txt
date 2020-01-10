@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+texasmountaineers.org	TRUE	/	FALSE	1999999999	PHPSESSID	jmt6tirc23iteg76hjtq2kjvk2
+.paypalobjects.com	TRUE	/	FALSE	1999999999	PYPF	CT-1
+.paypalobjects.com	TRUE	/	FALSE	1999999999	AKA_MVT_ID	4607c045f00d00007671135e35030000f43a0000
+.paypalobjects.com	TRUE	/	FALSE	1999999999	AKA_MVT_BUTTONS	|btn_buynow_LG.gif=btn_buynow_LG_var16.gif|
+
