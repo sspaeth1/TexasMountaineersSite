@@ -20,8 +20,19 @@
     }
     img{
       max-width:100%;
-
     }
+
+   img.bolt{
+        z-index: -1;
+        position: absolute;
+        top:450px;
+      }
+
+img.rock{
+  z-index: -2;
+  position: absolute;
+  top:450px;
+}
 
     ul{
       list-style-type: none;
@@ -45,26 +56,47 @@
 <section>
   <ul>
       <!-- <li class=""><img src="wordpress/wp-content/uploads/rustyHardware.png" alt=""></li>
-    <li class="scroll">hjkjhk<img class="scroll" src="wordpress/wp-content/uploads/boltHanger.png" alt=""></li>
+
     <li class="">dfg<img src="wordpress/wp-content/uploads/graniteRock.png" alt=""></li>
     <li class=""><img src="wordpress/wp-content/uploads/blurBG.png" alt=""></li> -->
-    <li class="scroll">AS</li>
-    <li >GAR</li>
-    <li>DEN</li>
+    <li class="scroll" data-rate='-.155'>Bolting</li>
+    <li class="scroll" data-rate='-.25'>&</li>
+    <li class='scroll' data-rate='.1'>Rebolting</li>
   </ul>
-
+    <span class="hanger" ><img class="bolt"  data-rate="1.01" src="wordpress/wp-content/uploads/boltHanger.png" alt=""></span>
+      <span class="" ><img class="rock"  data-rate=".1" src="wordpress/wp-content/uploads/graniteRock.png" alt=""></span>
 </section>
 <section></section>
 
 
   <script>
+
     window.addEventListener('scroll', function(e){
-          let target = document.querySelector('.scroll');
-          var scrolled = window.pageYOffset;
-          var rate =  scrolled * .5;
-          target.style.transform = ''traslateY( '+rate+'px;
-          console.log(  rate);
+          let target = document.querySelectorAll('.scroll');
+          let bolt = document.querySelector('.bolt');
+          let rock = document.querySelector('.rock');
+
+
+         var scrolled  = window.pageYOffset;
+         const rate = scrolled *  bolt.dataset.rate;
+        console.log(rock.style);
+         rock.style.transform =  'translate3d(0,0,0)'
+         bolt.style.transform = 'translate3d('+rate+'px, 10px, 5px)';
+                 console.log( rate);
+         //  var scrolled = window.pageYOffset;
+         //  var rate =  scrolled * .5;
+         // target.style.transform = 'translate3d( 0, '+rate + 'px, 0)';
+         //  console.log( target.style.transform );
+
+
+          let length = target.length;
+
+          for( let index = 0; index < length ; index++){
+            let pos = window.pageYOffset * target[index].dataset.rate;
+            target[index].style.transform = 'translate3d('+pos+'px, 0, 0)';
+          }
     });
+
   </script>
 
   </body>

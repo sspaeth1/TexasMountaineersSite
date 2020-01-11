@@ -111,12 +111,79 @@ button {
 .wp-smiley {
   display: inline; }
 
+
+
+  /*   Parallax  Css for JS starts */
+    .scroll{
+      font-size: 5em;
+      font-family: 'Roboto',sans-serif;
+    }
+    section{
+        height: 100%;
+      }
+
+    img{
+        max-width:100%;
+      }
+
+     img.bolt{
+          z-index: 2;
+          position: absolute;
+          top:1200px;
+          left: -100px;
+          height: 180px;
+        }
+
+      img.rock{
+        z-index: 1;
+        position: absolute;
+        top:1082px;
+        right:-1100px;
+          max-height: 1024px;
+      }
+      img.rockleft{
+        z-index: 1;
+        position: absolute;
+        top:1082px;
+        left: 0;
+        max-height: 1024px;
+      }
+      img.blurBG{
+        z-index: 0;
+        position: absolute;
+        top:1082px;
+        max-height: 1024px;
+      }
+
+    .parallax  ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display:grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+        align-items: middle;
+        place-items: center;
+        height:100vh;
+      }
+
+
+  /*   paralax ends*/
+
+
+
+
+
 /*
  * ---:[ layout structure ]:---
  */
 
 .site-logo{
   background-image: url();
+}
+
+.site-logo:hover{
+  opacity: .8;
 }
 
 body {
@@ -128,7 +195,6 @@ body {
   padding-top: 28px; }
 
 .container {
-  width: 1100px;
   margin: 0 auto; }
 
 .columns {
@@ -330,6 +396,8 @@ a {
     background: #444;
     padding: 50px;;
     color:#fff;
+    height: 400px;
+    vertical-align: center;
   }
 
 
@@ -1069,13 +1137,13 @@ input[type="submit"] {
           position: relative;
           margin-left: -30px;
           margin-bottom:30px;
-          padding-left: 30px;
+          padding-left: 150px;
           font-size: 2rem;
           line-height: 3em;
           background-color: #fbe108;
           border-radius: 0px  20px 20px 0px;
           background-image: url(../imgs/rope.png) no-repeat right center;
-          width: 80%;
+          width: 60%;
           box-shadow:          2px 2px 5px 	rgba(51, 153, 255, .25);
           -webkit-box-shadow:  2px 2px 5px rgba(51, 153, 255, .25);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
           -moz-box-shadow:     2px 2px 5px rgba(51, 153, 255, .25);}
@@ -1166,20 +1234,22 @@ input[type="submit"] {
 /*
  * ---:[ custom CSS ]:---
  */
+
+
 /*
  * ---:[ wrapper ]:---
- */
+
 .wrapper {
   background-color: #176693;
   padding: 10px 10px 10px 10px;
-    /*
-   * top, right, bottom, left
-   */
+
   background: url(../../../uploads/background_01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+ */
+
 
 /*
  * ---:[ container ]:---
@@ -1276,12 +1346,11 @@ input[type="submit"] {
   width: 125px;
   height: 150px;
   margin: -9px 10px -25px 5px;
-    /*
-   * top, right, bottom, left
-   */
   float: left;
   z-index: 1;
   opacity: 1 !important; }
+
+
 
 #thesis-search-widget-4 {
   float: right;
@@ -1643,7 +1712,21 @@ padding: 3px; }
 /*
  * ---:[ media queries ]:---
  */
+ @media only screen and (max-width: 1250px) {
+   .site-logo a {
+     background-image: url(../../../uploads/logo/logo.svg);
+     background-size: 50px 60px;
+     margin-top:-20px;
+     background-repeat: no-repeat;
+     width: 67px;
+     height: 81px;
+     opacity: 1 !important; }
+ }
+
+
+
 @media only screen and (max-width: 1100px) {
+
   #mc_embed_signup input.email {
     width: 100% !important; }
 
@@ -1727,8 +1810,6 @@ padding: 3px; }
          -webkit-transform: scale(0.7);
          -moz-transform: translateY(-35px) scale(0.5);
        }
-
-
     }
 
 @media only screen and (max-width: 1100px) {
