@@ -216,6 +216,7 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 		</div>
 
 		<div class="cardGray">
+
 			<h1> Bolting and Rebolting initiatives by Texas Mountaineers</h1>
 			<p>
 		Gary Ballard leads the sustainable bolding initiative. Keeping climbing areas safe takes a lot of time and expertise. The effort of the TM help maintains safety in our outdoor climbing environments. 
@@ -226,21 +227,10 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 
 		<div></div>
 		<section 	class='parallax'>
-			<div style="z-index:10">
-				<ul>
-						<!-- <li class=""><img src="wordpress/wp-content/uploads/rustyHardware.png" alt=""></li>
 
-					<li class="">dfg<img src="wordpress/wp-content/uploads/graniteRock.png" alt=""></li>
-					<li class=""><img src="wordpress/wp-content/uploads/blurBG.png" alt=""></li> -->
-					<li class="scroll" data-rate='-.155'>Bolting</li>
-					<li class="scroll" data-rate='-.25'>&</li>
-					<li class='scroll' data-rate='.1'>Rebolting</li>
-				</ul>
-
-			</div>
-
-		    <span class="hanger" ><img class="bolt"  data-rate=".7" src="wordpress/wp-content/uploads/boltHanger.png" alt=""></span>
-		      <span class="" ><img class="rock"  data-rate=".01" src="wordpress/wp-content/uploads/graniteRock.png" alt=""></span>
+		<span class=""><img class="rusty" src="wordpress/wp-content/uploads/rustyHardware.png" alt=""></span>
+		    <span class="hanger" ><img class="bolt"  data-rate=".5" src="wordpress/wp-content/uploads/boltHanger.png" alt=""></span>
+		      <span class="" ><img class="rock"  data-rate="-.55" src="wordpress/wp-content/uploads/graniteRock.png" alt=""></span>
 			  <span class="" ><img class="rockleft"  data-rate=".2" src="wordpress/wp-content/uploads/graniteRockleft.png" alt=""></span>
 				  <span class="" ><img class="blurBG"  data-rate=".2" src="wordpress/wp-content/uploads/blurBG.png" alt=""></span>
 		</section>
@@ -253,19 +243,21 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 		          let bolt = document.querySelector('.bolt');
 		          let rock = document.querySelector('.rock');
 							let bg = document.querySelector('.blurBG');
+							let target = document.querySelectorAll('scroll');
 
 
 		         var scrolled  = window.pageYOffset;
 		         const rateBolt = scrolled *  bolt.dataset.rate;
-						  const rateRock = scrolled *  bolt.dataset.rate;
+						  const rateRock = scrolled *  rock.dataset.rate;
 							const rateBG = scrolled * bg.dataset.rate;
 
-		        console.log(rock.style);
 
-		        bolt.style.transform = 'translate3d('+rateBolt+'px, 100px, 0)';
-		 			 rock.style.transform =  'translate3d(-'+rateBolt+'px, 0, 0)'
-					 bg.style.transform = opacity(.5);
-		                 console.log( rate);
+		        console.log(bg.style);
+
+		        bolt.style.transform = 'translate3d('+rateBolt+'px, 25px, 0)';
+		 			 rock.style.transform =  'translate3d('+rateRock+'px, 0, 0)';
+					 bg.style.opacity = 1200+rateBG;
+		                 console.log(  rateBG);
 
 
 		          let length = target.length;
@@ -284,7 +276,7 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 
 
 		<div class="cardGray">
-
+			<div class="card">
 				<div class="post_content" itemprop="articleBody">
 
 					<h2>Join our Newsletter!</h2>
@@ -315,13 +307,14 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 										<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 										</div>
 						</form>
-
-
-					<!--End mc_embed_signup--></div>
-							</div></div>
-							</div>
+					<!--End mc_embed_signup-->
 				</div>
 			</div>
+
+
+			</div>
+		</div>
+	</div>
 
 
 

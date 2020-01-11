@@ -36,6 +36,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+
+  p::first-letter{
+    font-weight: 900;
+  }
+
+  .footer p::first-letter{
+    font-weight: 300;
+  }
+
+
+
 img,
 fieldset {
   border: 0; }
@@ -69,7 +80,8 @@ video,
 embed,
 object {
   display: block;
-  max-width: 100%; }
+  max-width: 100%;
+  padding: 20px 0; }
 
 img {
   display: block; }
@@ -129,31 +141,37 @@ button {
      img.bolt{
           z-index: 2;
           position: absolute;
-          top:1200px;
+          /* top:1200px; */
           left: -100px;
-          height: 180px;
+          max-width: 500px;
         }
 
       img.rock{
         z-index: 1;
         position: absolute;
-        top:1082px;
-        right:-1100px;
-          max-height: 1024px;
+        /* top:1082px; */
+        right:-1200px;
+        max-height: 1024px;
       }
       img.rockleft{
         z-index: 1;
         position: absolute;
-        top:1082px;
+        /* top:1082px; */
         left: 0;
         max-height: 1024px;
       }
       img.blurBG{
         z-index: 0;
-        position: absolute;
-        top:1082px;
+        /* position: relative; */
+        /* top:1082px; */
         max-height: 1024px;
       }
+
+    .parallax{
+      position: inline-block;
+      position: relative;
+    }
+
 
     .parallax  ul{
         list-style-type: none;
@@ -394,9 +412,9 @@ a {
 
   .cardGray{
     background: #444;
+    line-height: 3rem;
     padding: 50px;;
     color:#fff;
-    height: 400px;
     vertical-align: center;
   }
 
@@ -1062,8 +1080,7 @@ input[type="submit"] {
 
   .container,
   .landing .container {
-    width: auto;
-    max-width: 820px; }
+    width: auto; }
 
   .header {
     border-top: 1px solid #dddddd; }
@@ -1142,6 +1159,7 @@ input[type="submit"] {
           line-height: 3em;
           background-color: #fbe108;
           border-radius: 0px  20px 20px 0px;
+          background-image: linear-gradient(#F9B906, #F9E106, #F9E106, #F9E106);
           background-image: url(../imgs/rope.png) no-repeat right center;
           width: 60%;
           box-shadow:          2px 2px 5px 	rgba(51, 153, 255, .25);
@@ -1256,14 +1274,7 @@ input[type="submit"] {
  */
 .container {
   background-color: #c6d5e3;
-    /*
-   * opacity: 0.85;
-   * filter: alpha(opacity=90);  For IE8 and earlier
-   */
-  padding: 5px 5px 5px 5px;
-    /*
-   * top, right, bottom, left
-   */
+
 
   box-shadow: 3px 1px 10px 1px #101820;
     /*
@@ -1484,7 +1495,7 @@ input[type="submit"] {
 
 .content > .post_box  h1,
 .sidebar > .text_box h1 {
-  text-decoration: underline; }
+ }
 
 .content .post_box .headline_area {
   margin-bottom: 5px; }
@@ -1730,11 +1741,6 @@ padding: 3px; }
   #mc_embed_signup input.email {
     width: 100% !important; }
 
-  .content > .post_box {
-    margin: 5px 0px 0px 0px;
-        /*
-     * top, right, bottom, left
-     */ }
 
   .columns > .sidebar {
     margin: 5px 0px 0px 0px;
@@ -1810,9 +1816,7 @@ padding: 3px; }
          -webkit-transform: scale(0.7);
          -moz-transform: translateY(-35px) scale(0.5);
        }
-    }
 
-@media only screen and (max-width: 1100px) {
   .site-logo a {
     background-image: url(../../../uploads/logo/logo.svg);
     background-size: 50px 60px;
@@ -1839,18 +1843,37 @@ padding: 3px; }
      */ }
     }
 
-@media all and (max-width: 480px) {
-    #mc_embed_signup input.email {
-      width: 100% !important; }
+@media all and (max-width: 501px) {
 
-    .site-logo {
-      display: none; }
+  #mc_embed_signup input.email {
+    width: 100% !important; }
 
-    .sticky{
-      position: inherit;
+  .content h1.headline{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    position: relative;
+    margin-left: -30px;
+    margin-bottom:15px;
+    padding-left: 30px;
+    font-size: 1rem;
+    line-height: 3em;
+    background-color: #fbe108;
+    border-radius: 0px  20px 20px 0px;
+    background-image: url(../imgs/rope.png) no-repeat right center;
+    width: 95%;
+    box-shadow:          2px 2px 5px 	rgba(51, 153, 255, .25);
+    -webkit-box-shadow:  2px 2px 5px rgba(51, 153, 255, .25);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:     2px 2px 5px rgba(51, 153, 255, .25);}
+    .headline::after{
+      content: url(../../../uploads/mtn.png);
+      position: absolute;
+      top: 35px;
+      right: 45px;
+      width: 1em;
+      height: 1em;
+      -webkit-transform: translateY(-30px) scale(0.33);
+      -moz-transform: translateY(-30px) scale(0.5);
     }
-  }
-
 
   #thesis-search-widget-4 .input_text {
     width: 75px; }
